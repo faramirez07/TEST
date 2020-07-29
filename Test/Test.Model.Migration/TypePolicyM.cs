@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Test.ModelMigration
+namespace Test.Model.Migration
 {
     [Table("TypePolicyM")]
     public class TypePolicyM

@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Test.ModelMigration
+namespace Test.Model.Migration
 {
     [Table("ClientM")]
     public class ClientM

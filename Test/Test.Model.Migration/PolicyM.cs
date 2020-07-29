@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.SqlTypes;
 
-namespace Test.ModelMigration
+namespace Test.Model.Migration
 {
     [Table("PolicyM")]
     public class PolicyM
@@ -17,6 +17,8 @@ namespace Test.ModelMigration
         public int Duration { get; set; }
         public decimal Price { get; set; }
         public string TypeRisk { get; set; }
+
+        public bool Active { get; set; }
         public string UserCreate { get; set; }
         public DateTime DateCreate { get; set; }
 

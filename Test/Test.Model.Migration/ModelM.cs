@@ -4,7 +4,7 @@ namespace Test.Model.Migration
     using System.Collections.Generic;
     using System.Data.Entity;
     using System.Linq;
-    using Test.ModelMigration;
+    using Test.Model.Migration;
 
     public class ModelM : DbContext
     {
@@ -24,11 +24,11 @@ namespace Test.Model.Migration
 
         // public virtual DbSet<MyEntity> MyEntities { get; set; }
         public virtual List<ClientM> Client { get; set; }
-        public virtual DbSet<PolicyM> Policy { get; set; }
-        public virtual DbSet<TypePolicyM> TypePolicy { get; set; }
-        public virtual DbSet<PolicyClientM> PolicyClient { get; set; }
+        public virtual List<PolicyM> Policy { get; set; }
+        public virtual List<TypePolicyM> TypePolicy { get; set; }
+        public virtual List<PolicyClientM> PolicyClient { get; set; }
 
-        public virtual DbSet<TypeRiskM> TypeRiskM { get; set; }
+        public virtual List<TypeRiskM> TypeRiskM { get; set; }
     }
 
     //public class MyEntity

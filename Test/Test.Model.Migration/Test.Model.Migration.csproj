@@ -59,6 +59,10 @@
     <Compile Include="Migrations\202007290300444_TypeRiskM.Designer.cs">
       <DependentUpon>202007290300444_TypeRiskM.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202007290343434_Policy.cs" />
+    <Compile Include="Migrations\202007290343434_Policy.Designer.cs">
+      <DependentUpon>202007290343434_Policy.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ModelM.cs" />
     <Compile Include="PolicyClientM.cs" />
@@ -76,6 +80,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202007290300444_TypeRiskM.resx">
       <DependentUpon>202007290300444_TypeRiskM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007290343434_Policy.resx">
+      <DependentUpon>202007290343434_Policy.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
