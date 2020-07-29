@@ -1,0 +1,13 @@
+C:\Users\framirez\Documents\GitHub\TEST\Test\Test.ModelMigration\bin\Debug\Test.ModelMigration.dll
+C:\Users\framirez\Documents\GitHub\TEST\Test\Test.ModelMigration\bin\Debug\Test.ModelMigration.pdb
+C:\Users\framirez\Documents\GitHub\TEST\Test\Test.ModelMigration\bin\Debug\EntityFramework.dll
+C:\Users\framirez\Documents\GitHub\TEST\Test\Test.ModelMigration\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\framirez\Documents\GitHub\TEST\Test\Test.ModelMigration\bin\Debug\EntityFramework.xml
+C:\Users\framirez\Documents\GitHub\TEST\Test\Test.ModelMigration\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\framirez\Documents\GitHub\TEST\Test\Test.ModelMigration\obj\Debug\Test.ModelMigration.csprojAssemblyReference.cache
+C:\Users\framirez\Documents\GitHub\TEST\Test\Test.ModelMigration\obj\Debug\Test.ModelMigration.csproj.CoreCompileInputs.cache
+C:\Users\framirez\Documents\GitHub\TEST\Test\Test.ModelMigration\obj\Debug\Test.ModelMigration.csproj.CopyComplete
+C:\Users\framirez\Documents\GitHub\TEST\Test\Test.ModelMigration\obj\Debug\Test.ModelMigration.dll
+C:\Users\framirez\Documents\GitHub\TEST\Test\Test.ModelMigration\obj\Debug\Test.ModelMigration.pdb
+C:\Users\framirez\Documents\GitHub\TEST\Test\Test.ModelMigration\obj\Debug\Test.ModelMigration.Migrations.ClientM.resources
+C:\Users\framirez\Documents\GitHub\TEST\Test\Test.ModelMigration\obj\Debug\Test.ModelMigration.csproj.GenerateResource.cache
