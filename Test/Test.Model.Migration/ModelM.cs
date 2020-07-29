@@ -1,6 +1,7 @@
 namespace Test.Model.Migration
 {
     using System;
+    using System.Collections.Generic;
     using System.Data.Entity;
     using System.Linq;
     using Test.ModelMigration;
@@ -22,7 +23,7 @@ namespace Test.Model.Migration
         // on configuring and using a Code First model, see http://go.microsoft.com/fwlink/?LinkId=390109.
 
         // public virtual DbSet<MyEntity> MyEntities { get; set; }
-        public virtual DbSet<ClientM> Client { get; set; }
+        public virtual List<ClientM> Client { get; set; }
         public virtual DbSet<PolicyM> Policy { get; set; }
         public virtual DbSet<TypePolicyM> TypePolicy { get; set; }
         public virtual DbSet<PolicyClientM> PolicyClient { get; set; }

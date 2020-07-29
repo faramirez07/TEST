@@ -3,17 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Test.Model;
+using Test.Model.Migration;
+using Test.Model.Migration.Migrations;
 
 namespace Test.DataAccess
 {
     public class Client
     {
-        public List<Cliente> GetAlL()
+        public List<ClientM> GetAlL()
         {
-            using (var context = new TestEntities())
+
+           using (var context = new ModelM())
             {
-                var listado = context.Cliente.ToList();
+                var listado = context.Client.ToList();
                 return listado;
             }
         }

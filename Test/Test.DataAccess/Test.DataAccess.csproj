@@ -53,14 +53,14 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Test.Model\Test.Model.csproj">
-      <Project>{9349b8d2-d0fe-4e42-8240-2049466e0cf1}</Project>
-      <Name>Test.Model</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Test.Model.Migration\Test.Model.Migration.csproj">
+      <Project>{a42179fd-ce7c-4dbc-bbd0-04f996024883}</Project>
+      <Name>Test.Model.Migration</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
