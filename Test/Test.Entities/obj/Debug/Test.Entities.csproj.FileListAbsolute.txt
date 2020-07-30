@@ -1,0 +1,6 @@
+C:\Users\framirez\Documents\GitHub\TEST\Test\Test.Entities\bin\Debug\Test.Entities.dll
+C:\Users\framirez\Documents\GitHub\TEST\Test\Test.Entities\bin\Debug\Test.Entities.pdb
+C:\Users\framirez\Documents\GitHub\TEST\Test\Test.Entities\obj\Debug\Test.Entities.csprojAssemblyReference.cache
+C:\Users\framirez\Documents\GitHub\TEST\Test\Test.Entities\obj\Debug\Test.Entities.csproj.CoreCompileInputs.cache
+C:\Users\framirez\Documents\GitHub\TEST\Test\Test.Entities\obj\Debug\Test.Entities.dll
+C:\Users\framirez\Documents\GitHub\TEST\Test\Test.Entities\obj\Debug\Test.Entities.pdb

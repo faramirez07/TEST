@@ -12,3 +12,4 @@ C:\Users\framirez\Documents\GitHub\TEST\Test\Test.Model.Migration\obj\Debug\Test
 C:\Users\framirez\Documents\GitHub\TEST\Test\Test.Model.Migration\obj\Debug\Test.Model.Migration.csproj.GenerateResource.cache
 C:\Users\framirez\Documents\GitHub\TEST\Test\Test.Model.Migration\obj\Debug\Test.Model.Migration.Migrations.TypeRiskM.resources
 C:\Users\framirez\Documents\GitHub\TEST\Test\Test.Model.Migration\obj\Debug\Test.Model.Migration.Migrations.Policy.resources
+C:\Users\framirez\Documents\GitHub\TEST\Test\Test.Model.Migration\obj\Debug\Test.Model.Migration.csprojAssemblyReference.cache
