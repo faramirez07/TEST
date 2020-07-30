@@ -64,7 +64,7 @@ namespace Test.DataAccess
             using (var context = new ModelM())
             {
                 var policyDelete = context.Policy.FirstOrDefault(x => x.IdPolicy == id);
-                context.Client.Remove(policyDelete);
+                context.Policy.Remove(policyDelete);
                 return context.SaveChanges() > 0;
             }
         }

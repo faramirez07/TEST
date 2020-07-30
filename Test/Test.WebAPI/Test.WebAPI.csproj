@@ -155,7 +155,12 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="Controllers\ClientController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PolicyClientController.cs" />
+    <Compile Include="Controllers\PolicyController.cs" />
+    <Compile Include="Controllers\TypePolicyController.cs" />
+    <Compile Include="Controllers\TypeRiskController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -245,6 +250,16 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Test.BusinessLogic\Test.BusinessLogic.csproj">
+      <Project>{9a1fb711-5d42-431b-9335-a9f668acecc8}</Project>
+      <Name>Test.BusinessLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Test.Model.Migration\Test.Model.Migration.csproj">
+      <Project>{A42179FD-CE7C-4DBC-BBD0-04F996024883}</Project>
+      <Name>Test.Model.Migration</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
