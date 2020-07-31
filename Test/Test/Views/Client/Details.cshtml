@@ -1,0 +1,45 @@
+﻿@model Test.Model.Migration.ClientM
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detalle Cliente</h2>
+
+<div class="form-group">
+    <label class="label label-info">Id</label>
+    <b> @Model.Id </b>
+</div>
+<div class="form-group">
+    <label class="label label-info">Name</label>
+    <b> @Model.Name </b>
+</div>
+<div class="form-group">
+    <label class="label label-info">Age</label>
+    <b> @Model.Age </b>
+</div>
+<div class="form-group">
+    <label class="label label-info">Status</label>
+    @if (@Model.Active)
+    {
+        <b> Active</b>
+    }
+    else
+    {
+        <b> Inactive </b>
+    }
+
+</div>
+<div class="form-group">
+    <label class="label label-info">User Create</label>
+    <b>    @Model.UserCreate </b>
+</div>
+<div class="form-group">
+    <label class="label label-info">Date Create</label>
+    <b>   @Model.DateCreate </b>
+</div>
+<div class="form-group">
+    <a href="@Url.Action("Index", "Client")" class="btn btn-info riht">Back</a>
+</div>
+
+

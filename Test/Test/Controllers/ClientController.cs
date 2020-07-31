@@ -12,14 +12,7 @@ namespace Test.Controllers
 {
     public class ClientController : Controller
     {
-        private List<ClientM> testClients;
-
-        public ClientController(List<ClientM> testClients)
-        {
-            this.testClients = testClients;
-        }
-
-        // GET: Cliente
+               // GET: Cliente
         public ActionResult Index()
         {
             HttpClient clientHttp = new HttpClient();
@@ -36,24 +29,7 @@ namespace Test.Controllers
 
             return View(new List<ClientM>());
         }
-
-        // GET: Cliente
-        public List<ClientM> ResultPrueba()
-        {
-            HttpClient clientHttp = new HttpClient();
-            clientHttp.BaseAddress = new Uri("https://localhost:44324/");
-
-            var request = clientHttp.GetAsync("api/Client").Result;
-
-            if (request.IsSuccessStatusCode)
-            {
-                var resulstring = request.Content.ReadAsStringAsync().Result;
-                var list = JsonConvert.DeserializeObject<List<ClientM>>(resulstring);
-                return list;
-            }
-
-            return (new List<ClientM>());
-        }
+              
 
         [HttpGet]
         public ActionResult New()

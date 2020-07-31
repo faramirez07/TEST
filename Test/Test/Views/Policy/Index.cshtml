@@ -1,0 +1,78 @@
+﻿@model List<Test.Model.Migration.PolicyM>
+@{
+    ViewBag.Title = "Policy";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>
+    <a href="@Url.Action("New", "Policy")" class="btn btn-primary right">New</a>
+    Policy List
+</h2>
+<Table class="table table-striped">
+    <thead>
+        <tr>
+            <td>Number</td>
+            <td>Policy Type</td>
+            <td>Start</td>
+            @*<td>Duracion</td>
+                <td>Precio</td>
+                <td>IdTipoRiesgo</td>
+                <td>Activo</td>*@
+            <td>User Create</td>
+            <td>Date Create</td>
+            <td>Actions</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var policy in Model)
+        {
+            <tr>
+                <th scope="row">@policy.IdPolicy</th>
+
+                @{
+                    switch (policy.IdPolicy)
+                    {
+                        case 1:
+                            // Use the text block below to separate html elements from code
+                            <text>
+                                 <th scope="row">Earthquake</th>
+                            </text>
+                            break;  // Always break each case
+                        case 2:
+                            <text>
+                                <th scope="row">Fire</th>
+                            </text>
+                            break;
+                        case 3:
+                            <text>
+                                <th scope="row">Stole</th>
+                            </text>
+                            break;
+                        default:
+                            <text>
+                                <th scope="row">Lost</th>
+                            </text>
+                            break;
+                    }
+                }
+                @*<td>@poliza.TipoPoliza</td>*@
+                <td>@policy.Start</td>
+                @*<td>@poliza.Duracion</td>
+                    <td>@poliza.Precio</td>
+                    <td>@poliza.IdTipoRiesgo</td>
+                    <td>@poliza.Activo</td>*@
+                <td>@policy.UserCreate</td>
+                <td>@policy.DateCreate</td>
+                <td>
+                    <a href="@Url.Action("Update", "Policy", new { id = policy.IdPolicy, idTypePolicySelec = policy.TypePolicy, idTypeRiskSelec = policy.TypeRisk})" class="btn btn-success">Update</a>
+                    <a href="@Url.Action("Delete", "Policy", new { id = policy.IdPolicy})" class="btn btn-danger">Delete</a>
+                    <a href="@Url.Action("Details", "Policy", new { id = policy.IdPolicy})" class="btn btn-info riht">View Details</a>
+                </td>
+            </tr>
+        }
+
+    </tbody>
+</Table>
+
+
+

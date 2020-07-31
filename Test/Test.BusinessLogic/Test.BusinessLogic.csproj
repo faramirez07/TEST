@@ -53,9 +53,9 @@
       <Project>{5daf9dad-7bce-4e92-8cb9-129c26592dc8}</Project>
       <Name>Test.DataAccess</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Test.Model.Migration\Test.Model.Migration.csproj">
-      <Project>{a42179fd-ce7c-4dbc-bbd0-04f996024883}</Project>
-      <Name>Test.Model.Migration</Name>
+    <ProjectReference Include="..\Test.ModelData\Test.ModelData.csproj">
+      <Project>{e4d12043-f2f7-422e-aaf8-16b3f9439cc2}</Project>
+      <Name>Test.ModelData</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

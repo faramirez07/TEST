@@ -67,12 +67,10 @@ C:\Users\framirez\Documents\GitHub\TEST\Test\Test.WebAPI\bin\System.Web.WebPages
 C:\Users\framirez\Documents\GitHub\TEST\Test\Test.WebAPI\bin\System.Web.WebPages.dll
 C:\Users\framirez\Documents\GitHub\TEST\Test\Test.WebAPI\bin\System.Web.WebPages.Razor.dll
 C:\Users\framirez\Documents\GitHub\TEST\Test\Test.WebAPI\bin\Test.BusinessLogic.dll
-C:\Users\framirez\Documents\GitHub\TEST\Test\Test.WebAPI\bin\Test.Model.Migration.dll
 C:\Users\framirez\Documents\GitHub\TEST\Test\Test.WebAPI\bin\WebGrease.dll
 C:\Users\framirez\Documents\GitHub\TEST\Test\Test.WebAPI\bin\Test.DataAccess.dll
 C:\Users\framirez\Documents\GitHub\TEST\Test\Test.WebAPI\bin\EntityFramework.dll
 C:\Users\framirez\Documents\GitHub\TEST\Test\Test.WebAPI\bin\Test.BusinessLogic.pdb
-C:\Users\framirez\Documents\GitHub\TEST\Test\Test.WebAPI\bin\Test.Model.Migration.pdb
 C:\Users\framirez\Documents\GitHub\TEST\Test\Test.WebAPI\bin\Newtonsoft.Json.xml
 C:\Users\framirez\Documents\GitHub\TEST\Test\Test.WebAPI\bin\System.Net.Http.Formatting.xml
 C:\Users\framirez\Documents\GitHub\TEST\Test\Test.WebAPI\bin\System.Web.Helpers.xml
@@ -92,3 +90,8 @@ C:\Users\framirez\Documents\GitHub\TEST\Test\Test.WebAPI\bin\EntityFramework.xml
 C:\Users\framirez\Documents\GitHub\TEST\Test\Test.WebAPI\obj\Debug\Test.WebAPI.csproj.CopyComplete
 C:\Users\framirez\Documents\GitHub\TEST\Test\Test.WebAPI\obj\Debug\Test.WebAPI.dll
 C:\Users\framirez\Documents\GitHub\TEST\Test\Test.WebAPI\obj\Debug\Test.WebAPI.pdb
+C:\Users\framirez\Documents\GitHub\TEST\Test\Test.WebAPI\bin\EntityFramework.SqlServer.dll
+C:\Users\framirez\Documents\GitHub\TEST\Test\Test.WebAPI\bin\EntityFramework.SqlServer.xml
+C:\Users\framirez\Documents\GitHub\TEST\Test\Test.WebAPI\bin\Test.ModelData.dll
+C:\Users\framirez\Documents\GitHub\TEST\Test\Test.WebAPI\bin\Test.ModelData.pdb
+C:\Users\framirez\Documents\GitHub\TEST\Test\Test.WebAPI\bin\Test.ModelData.dll.config

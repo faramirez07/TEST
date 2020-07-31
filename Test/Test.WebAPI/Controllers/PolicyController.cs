@@ -4,7 +4,9 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using Test.Model.Migration;
+using Test.ModelData;
+
+//using Test.Model.Migration;
 
 namespace Test.WebAPI.Controllers
 {
@@ -12,6 +14,14 @@ namespace Test.WebAPI.Controllers
     {
 
         BusinessLogic.PolicyBL PolicyProxy = new BusinessLogic.PolicyBL();
+
+
+        //private List<ClientM> testClients;
+
+        //public PolicyController(List<ClientM> testClients)
+        //{
+        //    this.testClients = testClients;
+        //}
 
         [HttpGet]
         public IEnumerable<PolicyM> Get()
@@ -28,16 +38,16 @@ namespace Test.WebAPI.Controllers
         }
 
         [HttpPost]
-        public bool Post(PolicyM policy)
+        public bool Post(PolicyM Policy)
         {
-            var list = PolicyProxy.Insert(policy);
+            var list = PolicyProxy.Insert(Policy);
             return list;
         }
 
         [HttpPut]
-        public bool Put(PolicyM policy)
+        public bool Put(PolicyM Policy)
         {
-            var list = PolicyProxy.Update(policy);
+            var list = PolicyProxy.Update(Policy);
             return list;
         }
 
@@ -47,5 +57,7 @@ namespace Test.WebAPI.Controllers
             var list = PolicyProxy.Delete(id);
             return list;
         }
+
+
     }
     }

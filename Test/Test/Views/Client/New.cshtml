@@ -1,0 +1,47 @@
+﻿@model Test.Model.Migration.ClientM
+@{
+    ViewBag.Title = "New";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Nuevo Cliente</h2>
+
+<hr />
+
+<form method="post" action="@Url.Action("New", "CLient")">
+    <div class="form-group">
+        <label>Id</label>
+        @Html.TextBoxFor(x => x.Id, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>Name</label>
+        @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>Age</label>
+        @Html.TextBoxFor(x => x.Age, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>Nationality</label>
+        @Html.TextBoxFor(x => x.Nationality, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>State</label>
+        @Html.TextBoxFor(x => x.Active, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>User Create</label>
+        @Html.TextBoxFor(x => x.UserCreate, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>Date Create</label>
+        @Html.TextBoxFor(x => x.DateCreate, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <input type="submit" class="btn-success" value="Send" />
+        <a href="@Url.Action("Index", "Client")" class="btn btn-info riht">Back</a>
+    </div>
+
+
+</form>
+

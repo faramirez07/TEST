@@ -1,16 +1,19 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Test.Model.Migration;
+using Test.ModelData;
+//using Test.Model;
+//using Test.Model.Migration;
 
 namespace Test.BusinessLogic
 {
     public class PolicyBL
     {
         DataAccess.Policy Policyproxy = new DataAccess.Policy();
-        public List<PolicyM> GetAlL()
+        public IEnumerable<PolicyM> GetAlL()
         {
             try
             {

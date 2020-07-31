@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Test.Model.Migration;
+using Test.ModelData;
 
 namespace Test.DataAccess
 {
@@ -12,36 +12,36 @@ namespace Test.DataAccess
         public List<TypeRiskM> GetAlL()
         {
 
-            using (var context = new ModelM())
+            using (var context = new DataEntities())
             {
-                var list = context.TypeRiskM.ToList();
+                var list = context.TypeRiskMs.ToList();
                 return list;
             }
         }
 
         public TypeRiskM GetID(int IdRisk)
         {
-            using (var context = new ModelM())
+            using (var context = new DataEntities())
             {
-                var typeRisk = context.TypeRiskM.FirstOrDefault(x => x.IdRisk == IdRisk);
+                var typeRisk = context.TypeRiskMs.FirstOrDefault(x => x.IdRisk == IdRisk);
                 return typeRisk;
             }
         }
 
         public bool Insert(TypeRiskM typeRisk)
         {
-            using (var context = new ModelM())
+            using (var context = new DataEntities())
             {
-                context.TypeRiskM.Add(typeRisk);
+                context.TypeRiskMs.Add(typeRisk);
                 return context.SaveChanges() > 0;
             }
         }
 
         public bool Update(TypeRiskM typeRisk)
         {
-            using (var context = new ModelM())
+            using (var context = new DataEntities())
             {
-                var typeriskUpdate = context.TypeRiskM.SingleOrDefault(x => x.IdRisk == typeRisk.IdRisk);
+                var typeriskUpdate = context.TypeRiskMs.SingleOrDefault(x => x.IdRisk == typeRisk.IdRisk);
                 typeriskUpdate.IdRisk = typeRisk.IdRisk;
                 typeriskUpdate.Name = typeRisk.Name;
                 typeriskUpdate.Active = Convert.ToBoolean(typeRisk.Active);
@@ -51,10 +51,10 @@ namespace Test.DataAccess
 
         public bool Delete(int id)
         {
-            using (var context = new ModelM())
+            using (var context = new DataEntities())
             {
-                var typerisk = context.TypeRiskM.FirstOrDefault(x => x.IdRisk == id);
-                context.TypeRiskM.Remove(typerisk);
+                var typerisk = context.TypeRiskMs.FirstOrDefault(x => x.IdRisk == id);
+                context.TypeRiskMs.Remove(typerisk);
                 return context.SaveChanges() > 0;
             }
         }

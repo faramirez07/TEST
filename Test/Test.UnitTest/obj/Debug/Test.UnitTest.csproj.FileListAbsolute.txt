@@ -54,3 +54,6 @@ C:\Users\framirez\Documents\GitHub\TEST\Test\Test.UnitTest\bin\Debug\Test.dll
 C:\Users\framirez\Documents\GitHub\TEST\Test\Test.UnitTest\bin\Debug\Test.pdb
 C:\Users\framirez\Documents\GitHub\TEST\Test\Test.UnitTest\bin\Debug\Test.dll.config
 C:\Users\framirez\Documents\GitHub\TEST\Test\Test.UnitTest\bin\Debug\System.Web.Helpers.xml
+C:\Users\framirez\Documents\GitHub\TEST\Test\Test.UnitTest\bin\Debug\Test.Model.dll
+C:\Users\framirez\Documents\GitHub\TEST\Test\Test.UnitTest\bin\Debug\Test.Model.pdb
+C:\Users\framirez\Documents\GitHub\TEST\Test\Test.UnitTest\bin\Debug\Test.Model.dll.config

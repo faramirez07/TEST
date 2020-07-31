@@ -4,13 +4,14 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using Test.Model.Migration;
+using Test.ModelData;
 
 namespace Test.WebAPI.Controllers
 {
     public class ClientController : ApiController
     {
         BusinessLogic.ClientBL clientProxy = new BusinessLogic.ClientBL();
+
 
         [HttpGet]
         public IEnumerable<ClientM> Get()

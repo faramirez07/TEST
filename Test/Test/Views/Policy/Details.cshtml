@@ -1,0 +1,117 @@
+﻿@model Test.Model.Migration.PolicyM
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Policy Details</h2>
+<hr />
+
+<div class="form-group">
+    <label class="label label-info">Policy Number</label>
+    <b> @Model.IdPolicy </b>
+</div>
+<div class="form-group">
+    <label class="label label-info">Policy Types</label>
+    @*<b> @Model.TipoPoliza </b>*@
+    @{
+        switch (@Model.IdPolicy)
+        {
+            case 1:
+                // Use the text block below to separate html elements from code
+                <text>
+                    <b>Earthquake</b>
+                </text>
+                break;  // Always break each case
+            case 2:
+                <text>
+                    <b>Fire</b>
+                </text>
+                break;
+            case 3:
+                <text>
+                    <b>Stole</b>
+                </text>
+                break;
+            default:
+                <text>
+                    <b>Lost</b>
+                </text>
+                break;
+        }
+    }
+</div>
+<div class="form-group">
+    <label class="label label-info">Policy Name</label>
+    <b> @Model.Name </b>
+</div>
+<div class="form-group">
+    <label class="label label-info">Description</label>
+    <b> @Model.Description </b>
+</div>
+<div class="form-group">
+    <label class="label label-info">Start Date</label>
+    <b> @Model.Start </b>
+</div>
+<div class="form-group">
+    <label class="label label-info">Duration</label>
+    <b>  @Model.Duration  </b> <b> months</b>
+</div>
+<div class="form-group">
+    <label class="label label-info">Price</label>
+    <b>  @Model.Price </b>
+</div>
+<div class="form-group">
+    <label class="label label-info">Type Risk</label>
+    @{
+        switch (@Model.TypeRisk)
+        {
+            case "1":
+                // Use the text block below to separate html elements from code
+                <text>
+                    <b>High</b>
+                </text>
+                break;  // Always break each case
+            case "2":
+                <text>
+                    <b>Medium-High</b>
+                </text>
+                break;
+            case "3":
+                <text>
+                    <b>Medium</b>
+                </text>
+                break;
+            default:
+                <text>
+                    <b>low</b>
+                </text>
+                break;
+        }
+    }
+    @*<b>  @Model.TipoRiesgo </b>*@
+</div>
+<div class="form-group">
+    <label class="label label-info">Status</label>
+    @if (@Model.Active)
+    {
+        <b> Active</b>
+    }
+    else
+    {
+        <b> Inactive </b>
+    }
+
+</div>
+<div class="form-group">
+    <label class="label label-info">User Create</label>
+    <b>    @Model.UserCreate </b>
+</div>
+<div class="form-group">
+    <label class="label label-info">Date Create</label>
+    <b>   @Model.DateCreate </b>
+</div>
+<div class="form-group">
+    <a href="@Url.Action("Index", "Policy")" class="btn btn-info riht">Back</a>
+</div>
+

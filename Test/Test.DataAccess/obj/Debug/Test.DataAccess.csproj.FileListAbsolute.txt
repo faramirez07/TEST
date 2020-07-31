@@ -5,10 +5,11 @@ C:\Users\framirez\Documents\GitHub\TEST\Test\Test.DataAccess\bin\Debug\Test.Data
 C:\Users\framirez\Documents\GitHub\TEST\Test\Test.DataAccess\bin\Debug\Test.DataAccess.pdb
 C:\Users\framirez\Documents\GitHub\TEST\Test\Test.DataAccess\bin\Debug\EntityFramework.dll
 C:\Users\framirez\Documents\GitHub\TEST\Test\Test.DataAccess\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\framirez\Documents\GitHub\TEST\Test\Test.DataAccess\bin\Debug\Test.Model.Migration.dll
-C:\Users\framirez\Documents\GitHub\TEST\Test\Test.DataAccess\bin\Debug\Test.Model.Migration.pdb
 C:\Users\framirez\Documents\GitHub\TEST\Test\Test.DataAccess\bin\Debug\EntityFramework.xml
 C:\Users\framirez\Documents\GitHub\TEST\Test\Test.DataAccess\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\framirez\Documents\GitHub\TEST\Test\Test.DataAccess\obj\Debug\Test.DataAccess.csproj.CopyComplete
 C:\Users\framirez\Documents\GitHub\TEST\Test\Test.DataAccess\obj\Debug\Test.DataAccess.dll
 C:\Users\framirez\Documents\GitHub\TEST\Test\Test.DataAccess\obj\Debug\Test.DataAccess.pdb
+C:\Users\framirez\Documents\GitHub\TEST\Test\Test.DataAccess\bin\Debug\Test.ModelData.dll
+C:\Users\framirez\Documents\GitHub\TEST\Test\Test.DataAccess\bin\Debug\Test.ModelData.pdb
+C:\Users\framirez\Documents\GitHub\TEST\Test\Test.DataAccess\bin\Debug\Test.ModelData.dll.config

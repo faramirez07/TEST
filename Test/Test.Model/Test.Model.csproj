@@ -53,6 +53,9 @@
     <Compile Include="Cliente.cs">
       <DependentUpon>ModelTest.tt</DependentUpon>
     </Compile>
+    <Compile Include="ClientM.cs">
+      <DependentUpon>ModelTest.tt</DependentUpon>
+    </Compile>
     <Compile Include="ModelTest.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -68,6 +71,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ModelTest.edmx</DependentUpon>
     </Compile>
+    <Compile Include="PolicyClientM.cs">
+      <DependentUpon>ModelTest.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PolicyM.cs">
+      <DependentUpon>ModelTest.tt</DependentUpon>
+    </Compile>
     <Compile Include="Poliza.cs">
       <DependentUpon>ModelTest.tt</DependentUpon>
     </Compile>
@@ -79,6 +88,12 @@
       <DependentUpon>ModelTest.tt</DependentUpon>
     </Compile>
     <Compile Include="TipoRiesgo.cs">
+      <DependentUpon>ModelTest.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TypePolicyM.cs">
+      <DependentUpon>ModelTest.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TypeRiskM.cs">
       <DependentUpon>ModelTest.tt</DependentUpon>
     </Compile>
   </ItemGroup>

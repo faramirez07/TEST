@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Test.Model.Migration;
+using Test.ModelData;
 
 namespace Test.DataAccess
 {
@@ -14,36 +14,36 @@ namespace Test.DataAccess
         public List<PolicyClientM> GetAlL()
         {
 
-            using (var context = new ModelM())
+            using (var context = new DataEntities())
             {
-                var list = context.PolicyClient.ToList();
+                var list = context.PolicyClientMs.ToList();
                 return list;
             }
         }
 
         public PolicyClientM GetID(int IdPolicyClient)
         {
-            using (var context = new ModelM())
+            using (var context = new DataEntities())
             {
-                var policyClient = context.PolicyClient.FirstOrDefault(x => x.IdPolicyClient == IdPolicyClient);
+                var policyClient = context.PolicyClientMs.FirstOrDefault(x => x.IdPolicyClient == IdPolicyClient);
                 return policyClient;
             }
         }
 
         public bool Insert(PolicyClientM policyClient)
         {
-            using (var context = new ModelM())
+            using (var context = new DataEntities())
             {
-                context.PolicyClient.Add(policyClient);
+                context.PolicyClientMs.Add(policyClient);
                 return context.SaveChanges() > 0;
             }
         }
 
         public bool Update(PolicyClientM policyClient)
         {
-            using (var context = new ModelM())
+            using (var context = new DataEntities())
             {
-                var policyClientUpdate = context.PolicyClient.SingleOrDefault(x => x.IdPolicyClient == policyClient.IdPolicyClient);
+                var policyClientUpdate = context.PolicyClientMs.SingleOrDefault(x => x.IdPolicyClient == policyClient.IdPolicyClient);
                 policyClientUpdate.IdPolicy = policyClient.IdPolicyClient;
                 policyClientUpdate.IdClient = policyClient.IdClient;
                 policyClientUpdate.IdPolicy = policyClient.IdPolicy;
@@ -58,10 +58,10 @@ namespace Test.DataAccess
 
         public bool Delete(int id)
         {
-            using (var context = new ModelM())
+            using (var context = new DataEntities())
             {
-                var policyClientDelete = context.PolicyClient.FirstOrDefault(x => x.IdPolicyClient == id);
-                context.PolicyClient.Remove(policyClientDelete);
+                var policyClientDelete = context.PolicyClientMs.FirstOrDefault(x => x.IdPolicyClient == id);
+                context.PolicyClientMs.Remove(policyClientDelete);
                 return context.SaveChanges() > 0;
             }
         }

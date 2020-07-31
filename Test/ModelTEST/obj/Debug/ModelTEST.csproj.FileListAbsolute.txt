@@ -1,0 +1,11 @@
+C:\Users\framirez\Documents\GitHub\TEST\Test\ModelTEST\bin\Debug\ModelTEST.dll.config
+C:\Users\framirez\Documents\GitHub\TEST\Test\ModelTEST\bin\Debug\ModelTEST.dll
+C:\Users\framirez\Documents\GitHub\TEST\Test\ModelTEST\bin\Debug\ModelTEST.pdb
+C:\Users\framirez\Documents\GitHub\TEST\Test\ModelTEST\bin\Debug\EntityFramework.dll
+C:\Users\framirez\Documents\GitHub\TEST\Test\ModelTEST\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\framirez\Documents\GitHub\TEST\Test\ModelTEST\bin\Debug\EntityFramework.xml
+C:\Users\framirez\Documents\GitHub\TEST\Test\ModelTEST\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\framirez\Documents\GitHub\TEST\Test\ModelTEST\obj\Debug\ModelTEST.csproj.CoreCompileInputs.cache
+C:\Users\framirez\Documents\GitHub\TEST\Test\ModelTEST\obj\Debug\ModelTEST.csproj.CopyComplete
+C:\Users\framirez\Documents\GitHub\TEST\Test\ModelTEST\obj\Debug\ModelTEST.dll
+C:\Users\framirez\Documents\GitHub\TEST\Test\ModelTEST\obj\Debug\ModelTEST.pdb

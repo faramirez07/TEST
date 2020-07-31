@@ -26,7 +26,7 @@ namespace Test.Controllers
                 return View(list);
             }
 
-            return View(new List<ClientM>());
+            return View(new List<PolicyClientM>());
         }
 
         [HttpGet]

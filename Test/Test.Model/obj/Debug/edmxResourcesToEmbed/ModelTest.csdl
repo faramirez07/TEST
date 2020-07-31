@@ -63,5 +63,67 @@
     <EntitySet Name="PolizaCliente" EntityType="Self.PolizaCliente" />
     <EntitySet Name="TipoPoliza" EntityType="Self.TipoPoliza" />
     <EntitySet Name="TipoRiesgo" EntityType="Self.TipoRiesgo" />
+    <EntitySet Name="ClientM" EntityType="TestModel.ClientM" />
+    <EntitySet Name="PolicyClientM" EntityType="TestModel.PolicyClientM" />
+    <EntitySet Name="PolicyM" EntityType="TestModel.PolicyM" />
+    <EntitySet Name="TypePolicyM" EntityType="TestModel.TypePolicyM" />
+    <EntitySet Name="TypeRiskM" EntityType="TestModel.TypeRiskM" />
   </EntityContainer>
+  <EntityType Name="ClientM">
+    <Key>
+      <PropertyRef Name="IdClient" />
+    </Key>
+    <Property Name="IdClient" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Age" Type="Int32" Nullable="false" />
+    <Property Name="Nationality" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Active" Type="Boolean" Nullable="false" />
+    <Property Name="UserCreate" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DateCreate" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="PolicyClientM">
+    <Key>
+      <PropertyRef Name="IdPolicyClient" />
+    </Key>
+    <Property Name="IdPolicyClient" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdClient" Type="Int32" Nullable="false" />
+    <Property Name="IdPolicy" Type="Int32" Nullable="false" />
+    <Property Name="CoveragePercentage" Type="Int32" Nullable="false" />
+    <Property Name="Active" Type="Boolean" Nullable="false" />
+    <Property Name="UserCreate" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DateCreate" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="PolicyM">
+    <Key>
+      <PropertyRef Name="IdPolicy" />
+    </Key>
+    <Property Name="IdPolicy" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TypePolicy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Start" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Duration" Type="Int32" Nullable="false" />
+    <Property Name="Price" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="TypeRisk" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Active" Type="Boolean" />
+    <Property Name="UserCreate" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DateCreate" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityType Name="TypePolicyM">
+    <Key>
+      <PropertyRef Name="IdPolicy" />
+    </Key>
+    <Property Name="IdPolicy" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Active" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TypeRiskM">
+    <Key>
+      <PropertyRef Name="IdRisk" />
+    </Key>
+    <Property Name="IdRisk" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Active" Type="Boolean" Nullable="false" />
+  </EntityType>
 </Schema>

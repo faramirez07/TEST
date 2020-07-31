@@ -30,5 +30,10 @@ namespace Test.Model
         public virtual DbSet<PolizaCliente> PolizaCliente { get; set; }
         public virtual DbSet<TipoPoliza> TipoPoliza { get; set; }
         public virtual DbSet<TipoRiesgo> TipoRiesgo { get; set; }
+        public virtual DbSet<ClientM> ClientM { get; set; }
+        public virtual DbSet<PolicyClientM> PolicyClientM { get; set; }
+        public virtual DbSet<PolicyM> PolicyM { get; set; }
+        public virtual DbSet<TypePolicyM> TypePolicyM { get; set; }
+        public virtual DbSet<TypeRiskM> TypeRiskM { get; set; }
     }
 }

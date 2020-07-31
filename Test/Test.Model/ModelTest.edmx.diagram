@@ -10,6 +10,11 @@
         <EntityTypeShape EntityType="TestModel.PolizaCliente" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="TestModel.TipoPoliza" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
         <EntityTypeShape EntityType="TestModel.TipoRiesgo" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestModel.ClientM" Width="1.5" PointX="5.75" PointY="4.75" />
+        <EntityTypeShape EntityType="TestModel.PolicyClientM" Width="1.5" PointX="7.75" PointY="0.75" />
+        <EntityTypeShape EntityType="TestModel.PolicyM" Width="1.5" PointX="0.75" PointY="7.75" />
+        <EntityTypeShape EntityType="TestModel.TypePolicyM" Width="1.5" PointX="2.75" PointY="7.75" />
+        <EntityTypeShape EntityType="TestModel.TypeRiskM" Width="1.5" PointX="7.75" PointY="4.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

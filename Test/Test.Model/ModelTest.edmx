@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="TestModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="TestModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Cliente">
           <Key>
             <PropertyRef Name="IdCliente" />
@@ -17,6 +17,47 @@
           <Property Name="Activo" Type="bit" Nullable="false" />
           <Property Name="UsuarioCreacion" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="FechaCreacion" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ClientM">
+          <Key>
+            <PropertyRef Name="IdClient" />
+          </Key>
+          <Property Name="IdClient" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" />
+          <Property Name="Age" Type="int" Nullable="false" />
+          <Property Name="Nationality" Type="nvarchar(max)" />
+          <Property Name="Active" Type="bit" Nullable="false" />
+          <Property Name="UserCreate" Type="nvarchar(max)" />
+          <Property Name="DateCreate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PolicyClientM">
+          <Key>
+            <PropertyRef Name="IdPolicyClient" />
+          </Key>
+          <Property Name="IdPolicyClient" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IdClient" Type="int" Nullable="false" />
+          <Property Name="IdPolicy" Type="int" Nullable="false" />
+          <Property Name="CoveragePercentage" Type="int" Nullable="false" />
+          <Property Name="Active" Type="bit" Nullable="false" />
+          <Property Name="UserCreate" Type="nvarchar(max)" />
+          <Property Name="DateCreate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PolicyM">
+          <Key>
+            <PropertyRef Name="IdPolicy" />
+          </Key>
+          <Property Name="IdPolicy" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TypePolicy" Type="nvarchar(max)" />
+          <Property Name="Name" Type="nvarchar(max)" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="Start" Type="nvarchar(max)" />
+          <Property Name="Duration" Type="int" Nullable="false" />
+          <Property Name="Price" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="TypeRisk" Type="nvarchar(max)" />
+          <Property Name="Active" Type="bit" />
+          <Property Name="UserCreate" Type="nvarchar(max)" />
+          <Property Name="DateCreate" Type="datetime" Nullable="false" />
         </EntityType>
         <EntityType Name="Poliza">
           <Key>
@@ -62,15 +103,35 @@
           <Property Name="Nombre" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="Activo" Type="bit" Nullable="false" />
         </EntityType>
+        <EntityType Name="TypePolicyM">
+          <Key>
+            <PropertyRef Name="IdPolicy" />
+          </Key>
+          <Property Name="IdPolicy" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" />
+          <Property Name="Active" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TypeRiskM">
+          <Key>
+            <PropertyRef Name="IdRisk" />
+          </Key>
+          <Property Name="IdRisk" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" />
+          <Property Name="Active" Type="bit" Nullable="false" />
+        </EntityType>
         <EntityContainer Name="TestModelStoreContainer">
           <EntitySet Name="Cliente" EntityType="Self.Cliente" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ClientM" EntityType="Self.ClientM" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PolicyClientM" EntityType="Self.PolicyClientM" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PolicyM" EntityType="Self.PolicyM" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Poliza" EntityType="Self.Poliza" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="PolizaCliente" EntityType="Self.PolizaCliente" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TipoPoliza" EntityType="Self.TipoPoliza" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TipoRiesgo" EntityType="Self.TipoRiesgo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TypePolicyM" EntityType="Self.TypePolicyM" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TypeRiskM" EntityType="Self.TypeRiskM" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="TestModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -137,7 +198,69 @@
           <EntitySet Name="PolizaCliente" EntityType="Self.PolizaCliente" />
           <EntitySet Name="TipoPoliza" EntityType="Self.TipoPoliza" />
           <EntitySet Name="TipoRiesgo" EntityType="Self.TipoRiesgo" />
+          <EntitySet Name="ClientM" EntityType="TestModel.ClientM" />
+          <EntitySet Name="PolicyClientM" EntityType="TestModel.PolicyClientM" />
+          <EntitySet Name="PolicyM" EntityType="TestModel.PolicyM" />
+          <EntitySet Name="TypePolicyM" EntityType="TestModel.TypePolicyM" />
+          <EntitySet Name="TypeRiskM" EntityType="TestModel.TypeRiskM" />
         </EntityContainer>
+        <EntityType Name="ClientM">
+          <Key>
+            <PropertyRef Name="IdClient" />
+          </Key>
+          <Property Name="IdClient" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Age" Type="Int32" Nullable="false" />
+          <Property Name="Nationality" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Active" Type="Boolean" Nullable="false" />
+          <Property Name="UserCreate" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DateCreate" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="PolicyClientM">
+          <Key>
+            <PropertyRef Name="IdPolicyClient" />
+          </Key>
+          <Property Name="IdPolicyClient" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdClient" Type="Int32" Nullable="false" />
+          <Property Name="IdPolicy" Type="Int32" Nullable="false" />
+          <Property Name="CoveragePercentage" Type="Int32" Nullable="false" />
+          <Property Name="Active" Type="Boolean" Nullable="false" />
+          <Property Name="UserCreate" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DateCreate" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="PolicyM">
+          <Key>
+            <PropertyRef Name="IdPolicy" />
+          </Key>
+          <Property Name="IdPolicy" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TypePolicy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Start" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Duration" Type="Int32" Nullable="false" />
+          <Property Name="Price" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="TypeRisk" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Active" Type="Boolean" />
+          <Property Name="UserCreate" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DateCreate" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="TypePolicyM">
+          <Key>
+            <PropertyRef Name="IdPolicy" />
+          </Key>
+          <Property Name="IdPolicy" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Active" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TypeRiskM">
+          <Key>
+            <PropertyRef Name="IdRisk" />
+          </Key>
+          <Property Name="IdRisk" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Active" Type="Boolean" Nullable="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -203,6 +326,68 @@
                 <ScalarProperty Name="IdRiesgo" ColumnName="IdRiesgo" />
                 <ScalarProperty Name="Nombre" ColumnName="Nombre" />
                 <ScalarProperty Name="Activo" ColumnName="Activo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ClientM">
+            <EntityTypeMapping TypeName="TestModel.ClientM">
+              <MappingFragment StoreEntitySet="ClientM">
+                <ScalarProperty Name="DateCreate" ColumnName="DateCreate" />
+                <ScalarProperty Name="UserCreate" ColumnName="UserCreate" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="Nationality" ColumnName="Nationality" />
+                <ScalarProperty Name="Age" ColumnName="Age" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="IdClient" ColumnName="IdClient" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PolicyClientM">
+            <EntityTypeMapping TypeName="TestModel.PolicyClientM">
+              <MappingFragment StoreEntitySet="PolicyClientM">
+                <ScalarProperty Name="DateCreate" ColumnName="DateCreate" />
+                <ScalarProperty Name="UserCreate" ColumnName="UserCreate" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="CoveragePercentage" ColumnName="CoveragePercentage" />
+                <ScalarProperty Name="IdPolicy" ColumnName="IdPolicy" />
+                <ScalarProperty Name="IdClient" ColumnName="IdClient" />
+                <ScalarProperty Name="IdPolicyClient" ColumnName="IdPolicyClient" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PolicyM">
+            <EntityTypeMapping TypeName="TestModel.PolicyM">
+              <MappingFragment StoreEntitySet="PolicyM">
+                <ScalarProperty Name="DateCreate" ColumnName="DateCreate" />
+                <ScalarProperty Name="UserCreate" ColumnName="UserCreate" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="TypeRisk" ColumnName="TypeRisk" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Duration" ColumnName="Duration" />
+                <ScalarProperty Name="Start" ColumnName="Start" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="TypePolicy" ColumnName="TypePolicy" />
+                <ScalarProperty Name="IdPolicy" ColumnName="IdPolicy" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TypePolicyM">
+            <EntityTypeMapping TypeName="TestModel.TypePolicyM">
+              <MappingFragment StoreEntitySet="TypePolicyM">
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="IdPolicy" ColumnName="IdPolicy" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TypeRiskM">
+            <EntityTypeMapping TypeName="TestModel.TypeRiskM">
+              <MappingFragment StoreEntitySet="TypeRiskM">
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="IdRisk" ColumnName="IdRisk" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

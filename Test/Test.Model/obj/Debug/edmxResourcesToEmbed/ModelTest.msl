@@ -63,5 +63,67 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="ClientM">
+      <EntityTypeMapping TypeName="TestModel.ClientM">
+        <MappingFragment StoreEntitySet="ClientM">
+          <ScalarProperty Name="DateCreate" ColumnName="DateCreate" />
+          <ScalarProperty Name="UserCreate" ColumnName="UserCreate" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="Nationality" ColumnName="Nationality" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdClient" ColumnName="IdClient" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PolicyClientM">
+      <EntityTypeMapping TypeName="TestModel.PolicyClientM">
+        <MappingFragment StoreEntitySet="PolicyClientM">
+          <ScalarProperty Name="DateCreate" ColumnName="DateCreate" />
+          <ScalarProperty Name="UserCreate" ColumnName="UserCreate" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="CoveragePercentage" ColumnName="CoveragePercentage" />
+          <ScalarProperty Name="IdPolicy" ColumnName="IdPolicy" />
+          <ScalarProperty Name="IdClient" ColumnName="IdClient" />
+          <ScalarProperty Name="IdPolicyClient" ColumnName="IdPolicyClient" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PolicyM">
+      <EntityTypeMapping TypeName="TestModel.PolicyM">
+        <MappingFragment StoreEntitySet="PolicyM">
+          <ScalarProperty Name="DateCreate" ColumnName="DateCreate" />
+          <ScalarProperty Name="UserCreate" ColumnName="UserCreate" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="TypeRisk" ColumnName="TypeRisk" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Duration" ColumnName="Duration" />
+          <ScalarProperty Name="Start" ColumnName="Start" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="TypePolicy" ColumnName="TypePolicy" />
+          <ScalarProperty Name="IdPolicy" ColumnName="IdPolicy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TypePolicyM">
+      <EntityTypeMapping TypeName="TestModel.TypePolicyM">
+        <MappingFragment StoreEntitySet="TypePolicyM">
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="IdPolicy" ColumnName="IdPolicy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TypeRiskM">
+      <EntityTypeMapping TypeName="TestModel.TypeRiskM">
+        <MappingFragment StoreEntitySet="TypeRiskM">
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="IdRisk" ColumnName="IdRisk" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DataModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ClientM">
+    <Key>
+      <PropertyRef Name="IdClient" />
+    </Key>
+    <Property Name="IdClient" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" />
+    <Property Name="Age" Type="int" Nullable="false" />
+    <Property Name="Nationality" Type="nvarchar(max)" />
+    <Property Name="Active" Type="bit" Nullable="false" />
+    <Property Name="UserCreate" Type="nvarchar(max)" />
+    <Property Name="DateCreate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PolicyClientM">
+    <Key>
+      <PropertyRef Name="IdPolicyClient" />
+    </Key>
+    <Property Name="IdPolicyClient" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdClient" Type="int" Nullable="false" />
+    <Property Name="IdPolicy" Type="int" Nullable="false" />
+    <Property Name="CoveragePercentage" Type="int" Nullable="false" />
+    <Property Name="Active" Type="bit" Nullable="false" />
+    <Property Name="UserCreate" Type="nvarchar(max)" />
+    <Property Name="DateCreate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PolicyM">
+    <Key>
+      <PropertyRef Name="IdPolicy" />
+    </Key>
+    <Property Name="IdPolicy" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TypePolicy" Type="nvarchar(max)" />
+    <Property Name="Name" Type="nvarchar(max)" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="Start" Type="nvarchar(max)" />
+    <Property Name="Duration" Type="int" Nullable="false" />
+    <Property Name="Price" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="TypeRisk" Type="nvarchar(max)" />
+    <Property Name="Active" Type="bit" />
+    <Property Name="UserCreate" Type="nvarchar(max)" />
+    <Property Name="DateCreate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TypePolicyM">
+    <Key>
+      <PropertyRef Name="IdPolicy" />
+    </Key>
+    <Property Name="IdPolicy" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" />
+    <Property Name="Active" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TypeRiskM">
+    <Key>
+      <PropertyRef Name="IdRisk" />
+    </Key>
+    <Property Name="IdRisk" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" />
+    <Property Name="Active" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="DataModelStoreContainer">
+    <EntitySet Name="ClientM" EntityType="Self.ClientM" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PolicyClientM" EntityType="Self.PolicyClientM" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PolicyM" EntityType="Self.PolicyM" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TypePolicyM" EntityType="Self.TypePolicyM" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TypeRiskM" EntityType="Self.TypeRiskM" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

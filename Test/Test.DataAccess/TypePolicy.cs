@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Test.Model.Migration;
+using Test.ModelData;
 
 namespace Test.DataAccess
 {
@@ -12,36 +12,36 @@ namespace Test.DataAccess
         public List<TypePolicyM> GetAlL()
         {
 
-            using (var context = new ModelM())
+            using (var context = new DataEntities())
             {
-                var list = context.TypePolicy.ToList();
+                var list = context.TypePolicyMs.ToList();
                 return list;
             }
         }
 
         public TypePolicyM GetID(int IdPolicy)
         {
-            using (var context = new ModelM())
+            using (var context = new DataEntities())
             {
-                var typePolicy = context.TypePolicy.FirstOrDefault(x => x.IdPolicy == IdPolicy);
+                var typePolicy = context.TypePolicyMs.FirstOrDefault(x => x.IdPolicy == IdPolicy);
                 return typePolicy;
             }
         }
 
         public bool Insert(TypePolicyM typePolicy)
         {
-            using (var context = new ModelM())
+            using (var context = new DataEntities())
             {
-                context.TypePolicy.Add(typePolicy);
+                context.TypePolicyMs.Add(typePolicy);
                 return context.SaveChanges() > 0;
             }
         }
 
         public bool Update(TypePolicyM typePolicy)
         {
-            using (var context = new ModelM())
+            using (var context = new DataEntities())
             {
-                var typepolicyUpdate = context.TypePolicy.SingleOrDefault(x => x.IdPolicy == typePolicy.IdPolicy);
+                var typepolicyUpdate = context.TypePolicyMs.SingleOrDefault(x => x.IdPolicy == typePolicy.IdPolicy);
                 typepolicyUpdate.IdPolicy = typePolicy.IdPolicy;
                 typepolicyUpdate.Name = typePolicy.Name;
                 typepolicyUpdate.Active = Convert.ToBoolean(typePolicy.Active);
@@ -51,10 +51,10 @@ namespace Test.DataAccess
 
         public bool Delete(int id)
         {
-            using (var context = new ModelM())
+            using (var context = new DataEntities())
             {
-                var typepolicy = context.TypePolicy.FirstOrDefault(x => x.IdPolicy == id);
-                context.TypePolicy.Remove(typepolicy);
+                var typepolicy = context.TypePolicyMs.FirstOrDefault(x => x.IdPolicy == id);
+                context.TypePolicyMs.Remove(typepolicy);
                 return context.SaveChanges() > 0;
             }
         }

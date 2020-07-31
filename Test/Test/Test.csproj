@@ -138,6 +138,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\styles.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -169,14 +170,26 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\_LayoutLogin.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\Admin\Login.cshtml" />
+    <Content Include="Views\Admin\Login2.cshtml" />
+    <Content Include="Views\Client\Index.cshtml" />
+    <Content Include="Views\Client\New.cshtml" />
+    <Content Include="Views\Client\Update.cshtml" />
+    <Content Include="Views\Client\Details.cshtml" />
+    <Content Include="Views\Policy\Index.cshtml" />
+    <Content Include="Views\Policy\New.cshtml" />
+    <Content Include="Views\Policy\Update.cshtml" />
+    <Content Include="Views\Policy\Details.cshtml" />
+    <Content Include="Views\PolicyClient\Index.cshtml" />
+    <Content Include="Views\PolicyClient\New.cshtml" />
+    <Content Include="Views\PolicyClient\Update.cshtml" />
+    <Content Include="Views\PolicyClient\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
-    <Folder Include="Views\Admin\" />
-    <Folder Include="Views\Client\" />
-    <Folder Include="Views\PolicyClient\" />
-    <Folder Include="Views\Policy\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DataModelStoreContainer" CdmEntityContainer="DataEntities">
+    <EntitySetMapping Name="ClientMs">
+      <EntityTypeMapping TypeName="DataModel.ClientM">
+        <MappingFragment StoreEntitySet="ClientM">
+          <ScalarProperty Name="IdClient" ColumnName="IdClient" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="Nationality" ColumnName="Nationality" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="UserCreate" ColumnName="UserCreate" />
+          <ScalarProperty Name="DateCreate" ColumnName="DateCreate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PolicyClientMs">
+      <EntityTypeMapping TypeName="DataModel.PolicyClientM">
+        <MappingFragment StoreEntitySet="PolicyClientM">
+          <ScalarProperty Name="IdPolicyClient" ColumnName="IdPolicyClient" />
+          <ScalarProperty Name="IdClient" ColumnName="IdClient" />
+          <ScalarProperty Name="IdPolicy" ColumnName="IdPolicy" />
+          <ScalarProperty Name="CoveragePercentage" ColumnName="CoveragePercentage" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="UserCreate" ColumnName="UserCreate" />
+          <ScalarProperty Name="DateCreate" ColumnName="DateCreate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PolicyMs">
+      <EntityTypeMapping TypeName="DataModel.PolicyM">
+        <MappingFragment StoreEntitySet="PolicyM">
+          <ScalarProperty Name="IdPolicy" ColumnName="IdPolicy" />
+          <ScalarProperty Name="TypePolicy" ColumnName="TypePolicy" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Start" ColumnName="Start" />
+          <ScalarProperty Name="Duration" ColumnName="Duration" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="TypeRisk" ColumnName="TypeRisk" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="UserCreate" ColumnName="UserCreate" />
+          <ScalarProperty Name="DateCreate" ColumnName="DateCreate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TypePolicyMs">
+      <EntityTypeMapping TypeName="DataModel.TypePolicyM">
+        <MappingFragment StoreEntitySet="TypePolicyM">
+          <ScalarProperty Name="IdPolicy" ColumnName="IdPolicy" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TypeRiskMs">
+      <EntityTypeMapping TypeName="DataModel.TypeRiskM">
+        <MappingFragment StoreEntitySet="TypeRiskM">
+          <ScalarProperty Name="IdRisk" ColumnName="IdRisk" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

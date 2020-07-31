@@ -1,48 +1,51 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Test.Model.Migration;
+using Test.ModelData;
+//using Test.Model;
+//using Test.Model.Migration;
 
 namespace Test.DataAccess
 {
     public class Policy
     {
 
-        public List<PolicyM> GetAlL()
+        public IEnumerable<PolicyM> GetAlL()
         {
 
-            using (var context = new ModelM())
+            using (var context = new DataEntities())
             {
-                var list = context.Policy.ToList();
+                var list = context.PolicyMs.ToList();
                 return list;
             }
         }
 
         public PolicyM GetID(int IdPolicy)
         {
-            using (var context = new ModelM())
+            using (var context = new DataEntities())
             {
-                var policy = context.Policy.FirstOrDefault(x => x.IdPolicy == IdPolicy);
+                var policy = context.PolicyMs.FirstOrDefault(x => x.IdPolicy == IdPolicy);
                 return policy;
             }
         }
 
         public bool Insert(PolicyM policy)
         {
-            using (var context = new ModelM())
+            using (var context = new DataEntities())
             {
-                context.Policy.Add(policy);
+                context.PolicyMs.Add(policy);
                 return context.SaveChanges() > 0;
             }
         }
 
         public bool Update(PolicyM policy)
         {
-            using (var context = new ModelM())
+            using (var context = new DataEntities())
             {
-                var policyUpdate = context.Policy.SingleOrDefault(x => x.IdPolicy == policy.IdPolicy);
+                var policyUpdate = context.PolicyMs.SingleOrDefault(x => x.IdPolicy == policy.IdPolicy);
                 policyUpdate.IdPolicy = policy.IdPolicy;
                 policyUpdate.TypePolicy = policy.TypePolicy;
                 policyUpdate.Name = policy.Name;
@@ -61,10 +64,10 @@ namespace Test.DataAccess
 
         public bool Delete(int id)
         {
-            using (var context = new ModelM())
+            using (var context = new DataEntities())
             {
-                var policyDelete = context.Policy.FirstOrDefault(x => x.IdPolicy == id);
-                context.Policy.Remove(policyDelete);
+                var policyDelete = context.PolicyMs.FirstOrDefault(x => x.IdPolicy == id);
+                context.PolicyMs.Remove(policyDelete);
                 return context.SaveChanges() > 0;
             }
         }

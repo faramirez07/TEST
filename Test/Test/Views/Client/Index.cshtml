@@ -1,0 +1,39 @@
+﻿@model List<Test.Model.Migration.ClientM>
+@{
+    ViewBag.Title = "Client";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>
+    <a href="@Url.Action("New", "Client")" class="btn btn-primary right">New</a>
+    Clients List
+</h2>
+<Table class="table table-striped">
+    <thead>
+        <tr>
+            <td>Numbre</td>
+            <td>Id</td>
+            <td>Name</td>
+            <td>User Create</td>
+            <td>Date Create</td>
+            <td>Actions</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var client in Model)
+        {
+            <tr>
+                <td>@client.IdClient</td>
+                <td>@client.Name</td>
+                <td>@client.UserCreate</td>
+                <td>@client.DateCreate</td>
+                <td>
+                    <a href="@Url.Action("Update", "Client", new { id = client.IdClient})" class="btn btn-success">Update</a>
+                    <a href="@Url.Action("Delete", "Client", new { id = client.IdClient})" class="btn btn-danger">Delete</a>
+                    <a href="@Url.Action("Details", "Client", new { id = client.IdClient})" class="btn btn-info riht">View Details</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</Table>
+

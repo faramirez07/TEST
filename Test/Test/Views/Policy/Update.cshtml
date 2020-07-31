@@ -1,0 +1,72 @@
+﻿@model Test.Model.Migration.PolicyM
+@{
+    ViewBag.Title = "Update";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Update</h2>
+
+<hr />
+
+<form method="post" action="@Url.Action("Update","Policy")">
+    <div class="form-group" style="visibility:hidden">
+        @Html.TextBoxFor(x => x.IdPolicy, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>TypePolicy</label>
+        @*@Html.DropDownList("TipoPoliza", new SelectList(ViewBag.TipoPoliza, "IdTipo", "Nombre"), new { @class = "form-control" })*@
+        @*@Html.DropDownList("TipoPoliza", (SelectList)ViewBag.TipoPoliza)*@
+        @Html.DropDownListFor(model => model.TypePolicy, ViewBag.TypePolicy as List<SelectListItem>, new { name = "TypePolicy", id = "TypePolicy", @class = "form-control" })
+        @*@Html.DropDownList("TipoPoliza", new SelectList(ViewBag.TipoPoliza, "IdTipo", "Nombre"), new { @class = "form-control" })*@
+        @* (model => model.TipoPoliza, (IEnumerable<SelectListItem>)ViewBag.TipoPoliza, new { @placeholder = "Seleccione un tipo de proyecto" })*@
+        @* @Html.TextBoxFor(x => x.TipoPoliza, new { @class = "form-control" })*@
+    </div>
+    <div class="form-group">
+        <label>Policy</label>
+        @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>Description</label>
+        @Html.TextBoxFor(x => x.Description, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>Start</label>
+        @Html.TextBoxFor(x => x.Start, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>Durations</label>
+        @Html.TextBoxFor(x => x.Duration, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>Price</label>
+        @Html.TextBoxFor(x => x.Price, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>TypeRisk</label>
+        @Html.DropDownListFor(model => model.TypeRisk, ViewBag.TypeRisk as List<SelectListItem>, new { name = "TypeRisk", id = "TypeRisk", @class = "form-control" })
+        @*@Html.DropDownList("TipoRiesgo", new SelectList(ViewBag.TipoRiesgo, "IdRiesgo", "Nombre"), new { @class = "form-control" })*@
+    </div>
+    <div class="form-group">
+        <label>Active</label>
+        @Html.CheckBoxFor(model => model.Active)
+
+        @*@Html.TextBoxFor(x => x.Activo, new { @class = "form-control" })*@
+    </div>
+    <div class="form-group">
+        <label>User Create</label>
+        @Html.TextBoxFor(x => x.UserCreate, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label>Date Create</label>
+        @Html.TextBoxFor(x => x.DateCreate, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <input type="submit" class="btn-success" value="Send" />
+        <a href="@Url.Action("Index", "Policy")" class="btn btn-info riht">Back</a>
+    </div>
+
+
+</form>
+
+
+

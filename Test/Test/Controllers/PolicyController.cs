@@ -26,14 +26,14 @@ namespace Test.Controllers
                 return View(list);
             }
 
-            return View(new List<ClientM>());
+            return View(new List<PolicyM>());
         }
 
         [HttpGet]
         public ActionResult New()
         {
             HttpClient clientHttp = new HttpClient();
-            clientHttp.BaseAddress = new Uri("https://localhost:44350/");
+            clientHttp.BaseAddress = new Uri("https://localhost:44324/");
 
             var requestTipoPoliza = clientHttp.GetAsync("api/TypePolicy").Result;
 
@@ -96,7 +96,7 @@ namespace Test.Controllers
                 var resulstring = requestTypeRisk.Content.ReadAsStringAsync().Result;
                 var listRisk = JsonConvert.DeserializeObject<List<TypeRiskM>>(resulstring);
                 SelectList ListTypeRisk = new SelectList(listRisk, "IdRisk", "Name", Convert.ToInt32(idTypeRiskSelec));
-                ViewBag.TipoRiesgo = ListTypeRisk;
+                ViewBag.TypeRisk = ListTypeRisk;
             }
 
             var requestTipoPoliza = clientHttp.GetAsync("api/TypePolicy").Result;
@@ -106,7 +106,7 @@ namespace Test.Controllers
             {
                 var resulstring = requestTipoPoliza.Content.ReadAsStringAsync().Result;
                 var listPolicy = JsonConvert.DeserializeObject<List<TypePolicyM>>(resulstring);
-                SelectList ListCategories = new SelectList(listPolicy, "IdType", "Name", Convert.ToInt32(idTypePolicySelec));
+                SelectList ListCategories = new SelectList(listPolicy, "IdPolicy", "Name", Convert.ToInt32(idTypePolicySelec));
                 ViewBag.TypePolicy = ListCategories;
                 //ViewBag.IdTipoPolizS = idTipoPolizSelec;
             }
@@ -114,7 +114,7 @@ namespace Test.Controllers
             if (request.IsSuccessStatusCode)
             {
                 var resulstring = request.Content.ReadAsStringAsync().Result;
-                var result = JsonConvert.DeserializeObject<ClientM>(resulstring);
+                var result = JsonConvert.DeserializeObject<PolicyM>(resulstring);
                 return View(result);
             }
 
@@ -177,7 +177,7 @@ namespace Test.Controllers
             if (request.IsSuccessStatusCode)
             {
                 var resulstring = request.Content.ReadAsStringAsync().Result;
-                var result = JsonConvert.DeserializeObject<ClientM>(resulstring);
+                var result = JsonConvert.DeserializeObject<PolicyM>(resulstring);
                 return View(result);
             }
 

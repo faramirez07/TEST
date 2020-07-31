@@ -5,7 +5,6 @@ C:\Users\framirez\Documents\GitHub\TEST\Test\Test.Model\bin\Debug\EntityFramewor
 C:\Users\framirez\Documents\GitHub\TEST\Test\Test.Model\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\framirez\Documents\GitHub\TEST\Test\Test.Model\bin\Debug\EntityFramework.xml
 C:\Users\framirez\Documents\GitHub\TEST\Test\Test.Model\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\framirez\Documents\GitHub\TEST\Test\Test.Model\obj\Debug\Test.Model.csprojAssemblyReference.cache
 C:\Users\framirez\Documents\GitHub\TEST\Test\Test.Model\obj\Debug\Test.Model.csproj.CoreCompileInputs.cache
 C:\Users\framirez\Documents\GitHub\TEST\Test\Test.Model\obj\Debug\Test.Model.csproj.CopyComplete
 C:\Users\framirez\Documents\GitHub\TEST\Test\Test.Model\obj\Debug\Test.Model.dll
